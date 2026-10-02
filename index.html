@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple AI Skill Builder</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app" id="app">
+ <aside>
+  <div class="brand">Simple AI Skill Builder</div>
+  <div class="sub">Create a SKILL.md in 6 steps</div>
+  <nav class="nav" id="nav" aria-label="Steps"></nav>
+  <div class="side-act">
+   <button class="btn sm" id="sample" type="button">Load an example</button>
+   <button class="btn sm" id="clear" type="button" style="margin-top:6px">Start over</button>
+  </div>
+ </aside>
+ <main>
+  <div class="bar"><i id="bar"></i></div>
+  <div class="scroll" id="scroll"><div id="step"></div></div>
+  <div class="foot">
+   <button class="btn" id="back" type="button">Back</button>
+   <button class="btn tabs" id="showp" type="button">Preview</button>
+   <button class="btn pri" id="next" type="button">Continue</button>
+  </div>
+ </main>
+ <section class="prev" aria-label="Markdown preview">
+  <div class="ph"><div>SKILL.md <span id="pmode">live preview</span></div>
+   <button class="btn sm tabs" id="closep" type="button">Close</button></div>
+  <textarea id="md" spellcheck="false" aria-label="SKILL.md Markdown" readonly></textarea>
+ </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
